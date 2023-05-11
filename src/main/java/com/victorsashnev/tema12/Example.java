@@ -1,14 +1,13 @@
 package com.victorsashnev.tema12;
 //import com.victorsashnev.tema12.Ejer02.Ejer02.Ejer02;
 import java.io.File;
-import java.util.Arrays;
 
-public class Main {
+public class Example {
     public static void main(String[] args) {/*
-    //ordenador de profe
+
+   //ordenador de profe
     File f = new File(File.separator +"home" + File.separator +"gacon" +File.separator +" hola.txt");*/
         //revibe como parametro u argumento y una ruta y decir si es un archivo o documento
-        //File
     if(args.length != 1){
         System.err.println("ERROR: debe indicar la ruta");
         System.exit(1);
