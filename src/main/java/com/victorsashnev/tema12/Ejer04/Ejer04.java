@@ -28,6 +28,7 @@ public class Ejer04 {
             System.out.println(list[1].canWrite());
             //System.out.println(dateFormat.format(fileTime));
             System.out.println(list[1].length());
+            //Post correction long bytes = f1.length();
 
 
         }

@@ -1,8 +1,9 @@
-package com.victorsashnev.tema12.Ejer05;
+package com.victorsashnev.tema12.Ejer06;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
 
 public class gestionarArchvio {
 
@@ -39,6 +40,22 @@ public class gestionarArchvio {
                     + " "+ file.isFile());
         }
     }
-
+    public void readText(String path){
+        StringBuilder sb = new StringBuilder();
+            try(FileReader fil = new FileReader(path)) {
+                int text;
+                // tiene que ser dentro para qu e null no sea el primera cosa que sale el null
+                //si no esta dentro vamos a tener null y texto
+                //Despues no poner en el while
+                while(( text= fil.read())>=0){
+                    sb.append((char)text);
+                }
+                } catch(FileNotFoundException e){
+                    throw new RuntimeException(e);
+                } catch(IOException e){
+                    throw new RuntimeException(e);
+                }
+        System.out.println(sb);
+    }
 
 }
