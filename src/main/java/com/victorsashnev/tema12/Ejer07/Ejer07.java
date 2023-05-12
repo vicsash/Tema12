@@ -13,7 +13,6 @@ public class Ejer07 {
         gestionarArchvio gestionar = new gestionarArchvio();
         gestionar.textToHexa(args[0]);
 
-
     }
 }
 /*
