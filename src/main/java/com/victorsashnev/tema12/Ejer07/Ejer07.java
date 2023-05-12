@@ -11,9 +11,7 @@ public class Ejer07 {
             System.exit(1);
         }
         gestionarArchvio gestionar = new gestionarArchvio();
-        File f = new File(args[0]);
-        File[] list = f.listFiles();
-        gestionar.readText(args[0]);
+        gestionar.textToHexa(args[0]);
 
 
     }

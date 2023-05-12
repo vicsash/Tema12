@@ -6,6 +6,8 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class gestionarArchvio {
+    private static final String NEW_LINE = System.lineSeparator();
+    private static final String UNKNOWN_CHARACTER = ".";
 
     //Files newFile;
     public boolean creteArchive(String directory, String archive) throws IOException {
@@ -44,9 +46,6 @@ public class gestionarArchvio {
         StringBuilder sb = new StringBuilder();
             try(FileReader fil = new FileReader(path)) {
                 int text;
-                // tiene que ser dentro para qu e null no sea el primera cosa que sale el null
-                //si no esta dentro vamos a tener null y texto
-                //Despues no poner en el while
                 while(( text= fil.read())>=0){
                     sb.append((char)text);
                 }
@@ -58,4 +57,23 @@ public class gestionarArchvio {
         System.out.println(sb);
     }
 
+    public void textToHexa(String path){
+        StringBuilder sb = new StringBuilder();
+        try(FileReader fil = new FileReader(path)) {
+            int text;
+            while(( text= fil.read())>=0){
+                sb.append(String.format("%02X",text));
+                sb.append(" ");
+            }
+        } catch(FileNotFoundException e){
+            throw new RuntimeException(e);
+        } catch(IOException e){
+            throw new RuntimeException(e);
+        }
+        System.out.println(sb);
+    }
+
+
 }
+
+
