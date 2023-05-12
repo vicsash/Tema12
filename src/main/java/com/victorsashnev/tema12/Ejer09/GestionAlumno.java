@@ -3,6 +3,7 @@ package com.victorsashnev.tema12.Ejer09;
 import java.io.*;
 
 public class GestionAlumno {
+    //Possible write method to add to lib
     public void insertarAlumnos(String [] aray,String path) throws IOException {
         FileWriter writer = new FileWriter(path);
         //Do with try
