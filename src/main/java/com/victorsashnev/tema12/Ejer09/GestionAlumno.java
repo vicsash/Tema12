@@ -5,6 +5,7 @@ import java.io.*;
 public class GestionAlumno {
     public void insertarAlumnos(String [] aray,String path) throws IOException {
         FileWriter writer = new FileWriter(path);
+        //Do with try
         BufferedWriter output = new BufferedWriter(writer);
         for (String s : aray) {
             output.write(s+"\n");
