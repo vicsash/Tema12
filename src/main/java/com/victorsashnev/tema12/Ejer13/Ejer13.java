@@ -2,22 +2,16 @@ package com.victorsashnev.tema12.Ejer13;
 
 import java.io.*;
 import com.victorsashnev.tema12.Lib.*;
-
 public class Ejer13 {
-    public static void main(String args[]) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException {
         int textnumb,newNumb;
         boolean confirmOcp = true;
         File f = new File(args[0]);
         if (f.exists()){
-        textnumb = confirmLastNum(f);
-            System.out.println(textnumb);
-        if(textnumb == 0){
-            confirmOcp = false;
-            }
            do{
                System.out.println("Introduce a number to confirm if it is prime.");
                System.out.println("Introduce 0 to end the process");
-                try(BufferedWriter writer = new BufferedWriter(new FileWriter(f,confirmOcp))){
+                try(BufferedWriter writer = new BufferedWriter(new FileWriter(f,true))){
                     newNumb = scanUtil.scanInt();
                     if(newNumb == 0) {
                         System.out.println("Operation finished");
@@ -31,7 +25,7 @@ public class Ejer13 {
                     throw new RuntimeException(e);
                 }
             }while(newNumb != 0);
-        }
+        }else System.out.println("The archive does not exist");
     }
 
     /**
@@ -40,6 +34,7 @@ public class Ejer13 {
      * @return either 0 or number
      * @throws FileNotFoundException
      */
+    /*
     public static int confirmLastNum(File f) throws FileNotFoundException {
         String text;
         int number = 0;
@@ -54,7 +49,7 @@ public class Ejer13 {
             return number;
         }
         return 0;
-    }
+    }*/
 
     /**
      * Confirm if number is prime
