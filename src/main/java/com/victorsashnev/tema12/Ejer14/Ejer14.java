@@ -8,7 +8,7 @@ public class Ejer14 {
     public static void main(String args[]) throws FileNotFoundException {
         File one = new File(args[0] + "/Ejer13.txt");
         File two = new File(args[0]+ "/Ejer09.txt");
-        if(compareTwoFilesText(one,two) && compareTwoFilesTextAsBin(one,two)){
+        if(compareTwoFilesTextAsBin(one,two)){
             System.out.println("The files are the same");
         }else
             System.out.println("The files are different");
@@ -51,7 +51,7 @@ public class Ejer14 {
      * @return
      * @throws FileNotFoundException
      */
-    public static boolean compareTwoFilesTextAsBin(File one, File two) throws FileNotFoundException {
+    public static boolean compareTwoFilesTextAsBin(File one, File two)  {
         try (FileInputStream frst = new FileInputStream(one);
              FileInputStream scnd = new FileInputStream(two);) {
             int text1;
