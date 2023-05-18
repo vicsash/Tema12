@@ -10,7 +10,7 @@ public class Ejer15 {
         if(setFoulders(one,two)){
             System.out.println("End");
         }
-
+    //Diffolder
 
     }
      public static boolean setFoulders(File one, File two) throws GestionArchivosNotFolderException {
