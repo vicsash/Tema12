@@ -18,7 +18,7 @@ public class Ejer09 {
         String [] arrayDniLetra = new String[arrayDni.length];
             for(int i = 0; i < arrayDni.length;i++ ){
                 for (int j = 0; j < 8;j++){
-                    arrayDni[i] += randomUtil.randomNumeber(9,0);
+                    arrayDni[i] += RandomUtilities.randomNumeber(9,0);
                 }
                 try ( FileWriter myWriter = new FileWriter("filename.txt");){
                     myWriter.write(arrayDni[i] +"\n");

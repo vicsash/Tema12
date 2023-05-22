@@ -1,32 +1,33 @@
 package com.victorsashnev.tema12.Lib;
 
+import java.util.ArrayList;
 import java.util.Random;
 
-public class arrayUtils {
+public class ArrayListUtilities<T> {
     static Random rand = new Random();
-    public static int randomNumeber(int max, int min){
+    private static int randomNumeber(int max, int min){
         int numb;
         return numb= rand.nextInt(max- min + 1) + min;
     }
-    public static double randomNumeberDouble(double max, double min){
+    private static double randomNumeberDouble(double max, double min){
         double numb;
         return numb= rand.nextDouble()*max+min;
     }
 
-    public static String printOutArray(int [] aray ){
+    public static String printOutArrayList(ArrayList<Integer> array){
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < aray.length;i++ ) {
-            sb.append(aray[i]).append("-");
+        for (int i = 0; i < array.size();i++ ) {
+            sb.append(array.get(i)).append("-");
         }
         return sb.toString();
     }
 
-    public static String visualitzarPosNum(int[] vector, int pos){
+    public static String visualitzarPosNum(ArrayList<Integer> array, int pos){
         int count=0;
         StringBuilder sb = new StringBuilder();
-        for(int i=0;i< vector.length;i++){
-            if(vector[i] % pos ==0){
-                sb= sb.append(vector[i]).append(" posicion ").append(count);
+        for(int i=0;i< array.size();i++){
+            if(array.get(i) % pos ==0){
+                sb= sb.append(array.get(i)).append(" posicion ").append(count);
                 sb.append("\n");
             }
             count++;
@@ -50,9 +51,9 @@ public class arrayUtils {
         return aray;
     }
 
-    public static int searchIfReferenceInArray(int refence,int counter, int []aray){
-        for(int i = 0; i < counter; i++){
-            if( refence == aray[i]){
+    public static int searchIfReferenceInArray(int refence, ArrayList<Integer> aray){
+        for(int i = 0; i < aray.size(); i++){
+            if( refence == aray.get(i)){
                 return 1;
             }
         }
@@ -68,5 +69,4 @@ public class arrayUtils {
         }
         return  -1;
     }
-
 }
