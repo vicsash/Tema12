@@ -13,7 +13,6 @@ public class ArrayListUtilities<T> {
         double numb;
         return numb= rand.nextDouble()*max+min;
     }
-
     public static String printOutArrayList(ArrayList<Integer> array){
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < array.size();i++ ) {
@@ -21,7 +20,6 @@ public class ArrayListUtilities<T> {
         }
         return sb.toString();
     }
-
     public static String visualitzarPosNum(ArrayList<Integer> array, int pos){
         int count=0;
         StringBuilder sb = new StringBuilder();
@@ -50,7 +48,6 @@ public class ArrayListUtilities<T> {
         }
         return aray;
     }
-
     public static int searchIfReferenceInArray(int refence, ArrayList<Integer> aray){
         for(int i = 0; i < aray.size(); i++){
             if( refence == aray.get(i)){
@@ -59,7 +56,6 @@ public class ArrayListUtilities<T> {
         }
         return  -1;
     }
-
     public static int searchIfStringInArray(String refence,int counter, int []aray){
         for(int i = 0; i < counter; i++){
             String search = String.valueOf(aray[i]);

@@ -22,6 +22,7 @@ public class MatrixUtilities<T,R> {
             }
         return -1;
      }
+
      public static String printOutMatrix(Object[][] R){
         StringBuilder sb = new StringBuilder();
          for (int i = 0; i < R.length;i++){

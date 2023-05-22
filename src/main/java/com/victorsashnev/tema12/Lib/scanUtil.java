@@ -36,6 +36,7 @@ public class scanUtil {
         String text;
         return text = scanner.nextLine();
     }
+
     public  static char scanChar(){
         char caracter;
         return caracter = scanner.next().charAt(0);

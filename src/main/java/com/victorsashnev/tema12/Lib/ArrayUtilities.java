@@ -64,14 +64,10 @@ public class ArrayUtilities <T,R>{
         int sum[]= new int[SIZE];
 
         for (int i = 0; i < sum.length;i++){
-
             sum[i]= (aray[i]) + (arayTwo[i]);
         }
-
         return sum;
-
     }
-
     public static int[] arrayMult(int[] aray, int[] arayTwo) {
         final int SIZE=10;
         int mult[]= new int[SIZE];
@@ -79,12 +75,8 @@ public class ArrayUtilities <T,R>{
 
             mult[i]= (aray[i]) * (arayTwo[i]);
         }
-
-
         return mult;
-
     }
-
     public static int[] makeArayWithElementsAbove(int[] aray, int numb){
         for(int i=0; i<aray.length;i++){
             if(aray[i]>numb){
@@ -119,7 +111,6 @@ public class ArrayUtilities <T,R>{
         }
         return sb.toString();
     }
-
     public static String printArrayWithSpecificInt(int numb, int counter,int [] aray) {
         counter = 0;
         StringBuilder sb = new StringBuilder();

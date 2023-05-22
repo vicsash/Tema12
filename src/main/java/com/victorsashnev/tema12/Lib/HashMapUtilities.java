@@ -13,5 +13,4 @@ public class HashMapUtilities<K,V,T,R> {
         double numb;
         return numb= rand.nextDouble()*max+min;
     }
-
 }

@@ -7,7 +7,6 @@ public class StringUtilities {
         String s=a.substring(0,1).toUpperCase()+a.substring(1);
         return s;
     }
-
     public static int vocals(String s){
         int numVocales=0;
         String vocales="aáàeéèiíìoóòuúù";
@@ -18,12 +17,9 @@ public class StringUtilities {
             if (vocales.contains(c)){
                 numVocales++;
             }
-
         }
-
         return numVocales ;
     }
-
     public static int consonants(String s){
         int numconsonants=0;
         String consonants="bcdfghjklmnñpqrstvwxyz";
@@ -36,10 +32,8 @@ public class StringUtilities {
             }
 
         }
-
         return numconsonants ;
     }
-
     public static String longestWord(String texto){
         texto.trim();
         String masLarga="";
@@ -51,7 +45,6 @@ public class StringUtilities {
         }
         return masLarga;
     }
-
     public static String oneLineWord(String a){
         a=a.trim();
         StringBuilder sb = new StringBuilder();
@@ -61,7 +54,6 @@ public class StringUtilities {
         }
         return sb.toString();
     }
-
     public static String letterOddPos(String frase){
         frase =frase.trim();
         String[]lineWord= frase.split("\\s+");
@@ -76,10 +68,8 @@ public class StringUtilities {
             }
             sb.append("\n");
         }
-
         return sb.toString() ;
     }
-
     public static String eliminarAcentos(String texto){
         String origen="áàéèíìóòúù";
         String destino="aaeeiioouu";
@@ -88,19 +78,16 @@ public class StringUtilities {
         }
         return texto;
     }
-
     public static String replaceLetters( String s, String select, String replace){
         String line;
         line=s.replaceAll(select,replace);
         return line;
     }
-
     public static String subsituteNumbers( String s, String replace){
         String line;
         line=s.replaceAll("\\d",replace);
         return line;
     }
-
     public static String letterPosOdd(String s){
         StringBuilder sb = new StringBuilder();
         for(int i=0; i < s.length();i++){
@@ -110,7 +97,6 @@ public class StringUtilities {
         }
         return sb.toString();
     }
-
     public static String letterPosEven(String s){
         StringBuilder sb = new StringBuilder();
         for(int i=0; i < s.length();i++){

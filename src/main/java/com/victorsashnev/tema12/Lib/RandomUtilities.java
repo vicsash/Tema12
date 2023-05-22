@@ -13,4 +13,5 @@ public class RandomUtilities {
         double numb;
         return numb= rand.nextDouble()*max+min;
     }
+
 }
